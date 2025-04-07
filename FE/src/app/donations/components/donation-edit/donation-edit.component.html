@@ -1,0 +1,68 @@
+<div class="editForm">
+  <h1>{{ 'DONATION_EDIT.UPDATE_DONATION' | translate }}</h1>
+  <form class="donationEditForm" [formGroup]="donationEditForm" (ngSubmit)="onSave()">
+    <mat-form-field class="donationEditField">
+      <input matInput placeholder="{{ 'DONATION_EDIT.AMOUNT' | translate }}" formControlName="amount">
+      <mat-error *ngIf="donationEditForm.get('amount')?.hasError('required')">
+        {{ 'DONATION_EDIT.AMOUNT_REQUIRED' | translate }}
+      </mat-error>
+      <mat-error *ngIf="donationEditForm.get('amount')?.hasError('pattern')">
+        {{ 'DONATION_EDIT.VALID_AMOUNT' | translate }}
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="donationField">
+      <mat-label>{{ 'DONATION_EDIT.CURRENCY' | translate }}</mat-label>
+      <mat-select formControlName="currency">
+        <mat-option *ngFor="let currency of currency" [value]="currency.value">
+          {{ currency.value }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="donationEditForm.get('currency')?.hasError('required')">
+        {{ 'DONATION_EDIT.CURRENCY_REQUIRED' | translate }}
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="donationField">
+      <input matInput placeholder="Search Campaign" [formControl]="searchControlCampaign">
+
+      <mat-select placeholder="{{ 'DONATION_EDIT.CAMPAIGN' | translate }}" formControlName="campaignId" (selectionChange)="hideSearchCamp()" style="margin-top: 15px">
+        <mat-option *ngFor="let camp of filteredCampaigns" [value]="camp">
+          {{ camp.name }}
+        </mat-option>
+      </mat-select>
+        <mat-error *ngIf="donationEditForm.get('campaignId')?.hasError('required')">
+          {{ 'DONATION_EDIT.CAMPAIGN_REQUIRED' | translate }}
+        </mat-error>
+        <mat-error *ngIf="donationEditForm.get('campaignId')?.hasError('pattern')">
+          {{ 'DONATION_EDIT.VALID_CAMPAIGN' | translate }}
+            </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="donationField">
+      <input matInput placeholder="Search Benefactor" [formControl]="searchControl">
+
+      <mat-select placeholder="{{ 'DONATION_EDIT.BENEFACTOR' | translate }}" formControlName="benefactor" (selectionChange)="hideSearchBenef()" style="margin-top: 15px">
+        <mat-option *ngFor="let benef of filteredBenefactors" [value]="benef">
+          {{ benef.firstname === 'Unknown' ? 'Unknown' : (benef.firstname + ' ' + (benef.lastname || '') + ' ' + (benef.maidenName || '') + ' ' + (benef.additionalName || '')) }}
+        </mat-option>
+      </mat-select>
+        <mat-error *ngIf="donationEditForm.get('benefactor')?.hasError('required')">
+          {{ 'DONATION_EDIT.BENEFACTOR_REQUIRED' | translate }}
+        </mat-error>
+        <mat-error *ngIf="donationEditForm.get('benefactor')?.hasError('pattern')">
+          {{ 'DONATION_EDIT.VALID_BENEFACTOR' | translate }}
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="donationField">
+      <textarea matInput placeholder="{{ 'DONATION_EDIT.NOTES' | translate }}" formControlName="notes" maxlength="255"></textarea>
+    </mat-form-field>
+    <div class="form-button">
+      <p>{{ 'DONATION_EDIT.FORM_INSTRUCTIONS' | translate }}</p>
+      <br>
+      <button mat-raised-button disabled type="submit" [disabled]="!donationEditForm.valid">
+        {{ 'DONATION_EDIT.UPDATE_BUTTON' | translate }}
+      </button>
+    </div>
+  </form>
+</div>

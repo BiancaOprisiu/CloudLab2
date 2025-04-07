@@ -1,0 +1,41 @@
+table {
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0px 0px 10px #6f5f90;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td, th {
+  width: 40%;
+}
+button{
+  margin:10px;
+}
+
+.greyed-out{
+  color:#d2d2d2;
+  cursor: default;
+}
+mat-form-field{
+  margin-left:10%;
+}
+
+.csv-icon{
+  margin-top: 0px;
+}
+
+.hoverable-table .mat-row {
+  transition: background-color 0.3s;
+}
+
+.hoverable-table .hovered-row:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.campaign-header-actions {
+  text-align: right;
+}

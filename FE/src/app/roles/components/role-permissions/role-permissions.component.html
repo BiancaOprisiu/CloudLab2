@@ -1,0 +1,24 @@
+<body>
+<br>
+<br>
+<br>
+<br>
+<div class="table-container">
+<table class="permTab">
+  <thead>
+  <tr>
+    <th class="alone"></th>
+    <th class="roles" *ngFor="let role of roleList$ | async">{{ role.name}}</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let permission of permissionList$ | async">
+    <td>{{ permission.name }}</td>
+    <td *ngFor="let role of roleList$ | async">
+      <input type="checkbox" [checked]="hasPermission(role, permission)"
+             (change)="changePermission(role, permission)">
+    </td>
+  </tr>
+  </tbody>
+</table>
+</div>

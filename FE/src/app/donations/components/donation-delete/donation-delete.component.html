@@ -1,0 +1,13 @@
+<div class="delete-dialog">
+  <h2 class="delete-dialog-title">{{ 'DELETE_DIALOG_DONATION.TITLE' | translate }}</h2>
+  <div class="delete-dialog-buttons">
+    <button mat-flat-button class="delete-button" (click)="onDelete()">
+      <mat-icon>delete</mat-icon>
+      {{ 'DELETE_DIALOG_DONATION.DELETE_BUTTON' | translate }}
+    </button>
+    <button mat-flat-button class="cancel-button" (click)="onCancel()">
+      <mat-icon>cancel</mat-icon>
+      {{ 'DELETE_DIALOG_DONATION.CANCEL_BUTTON' | translate }}
+    </button>
+  </div>
+</div>

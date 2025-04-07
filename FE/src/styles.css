@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700|Material+Icons');
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+mat-icon{
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.error-snack {
+  background-color: #ff7b89;
+  color: black;
+}
+
+.ok-snack {
+  color: #000000;
+  background-color: #a5cad2;
+  border-color: #758eb7;
+}
+

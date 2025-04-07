@@ -1,0 +1,20 @@
+<body>
+<div class="login-container">
+  <h1>{{ 'LOGIN_FORM.LOGIN' | translate }}</h1>
+  <div class="registerForm">
+    <form class="example-form" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="{{ 'LOGIN_FORM.USERNAME' | translate }}" formControlName="username">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="{{ 'LOGIN_FORM.PASSWORD' | translate }}" formControlName="password" type="password">
+      </mat-form-field>
+      <div class="form-button">
+        <p>{{ 'LOGIN_FORM.COMPLETE_FORM_NOTE' | translate }}</p>
+        <br>
+        <button mat-raised-button disabled type="submit" [disabled]="!loginForm.valid">{{ 'LOGIN_FORM.LOGIN' | translate }}</button>
+      </div>
+    </form>
+  </div>
+</div>
+</body>

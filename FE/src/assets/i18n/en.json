@@ -1,0 +1,213 @@
+{
+  "NAVIGATION": {
+    "USERS": "Users",
+    "CAMPAIGNS": "Campaigns",
+    "CAMPAIGN_LIST": "Campaign List",
+    "DONORS": "Donors",
+    "DONOR_LIST": "Donor List",
+    "ADD_DONOR": "Add Donor",
+    "DONATIONS": "Donations",
+    "DONATION_LIST": "Donation List",
+    "ADD_DONATION": "Add Donation",
+    "ROLES": "Roles",
+    "ADD_CAMPAIGN": "Add Campaign"
+  },
+  "ACTIONS": {
+    "ADD": "Add",
+    "HOME": "Home"
+  },
+  "LANDING_PAGE": {
+    "HERO_TITLE": "DonationManager Application",
+    "HERO_DESCRIPTION": "Software for more efficient management of community, activities and members.",
+    "FEATURE1_TITLE": "Efficient Organization",
+    "FEATURE1_DESCRIPTION": "Manage your community, activities, and members more efficiently and organized manner.",
+    "FEATURE2_TITLE": "Manage Donations",
+    "FEATURE2_DESCRIPTION": "Easily record and track donations for increased transparency in the donation process.",
+    "FEATURE3_TITLE": "Useful Reports",
+    "FEATURE3_DESCRIPTION": "Access relevant reports and statistics to make informed decisions for your organization."
+  },
+  "DONOR_TABLE": {
+    "FIRST_NAME": "First Name",
+    "LAST_NAME": "Last Name",
+    "ADDITIONAL_NAME": "Additional Name",
+    "MAIDEN_NAME": "Maiden Name",
+    "ACTIONS": "Actiuni"
+  },
+  "EDIT_DONOR_PAGE": {
+    "EDIT_DONOR": "Edit Donor",
+    "FIRST_NAME": "First Name",
+    "LAST_NAME": "Last Name",
+    "ADDITIONAL_NAME": "Additional Name",
+    "MAIDEN_NAME": "Maiden Name",
+    "COMPLETE_FORM_MESSAGE": "* Complete the form to enable the button.",
+    "SAVE_BUTTON": "Save"
+  },
+  "DELETE_DIALOG": {
+    "ARE_YOU_SURE": "Are you sure you want to delete this donor?",
+    "DELETE": "Delete",
+    "CANCEL": "Cancel"
+  },
+  "ADD_DONOR_FORM": {
+    "TITLE": "Add donor",
+    "FIRST_NAME": "First Name",
+    "LAST_NAME": "Last Name",
+    "ADDITIONAL_NAME": "Additional Name",
+    "MAIDEN_NAME": "Maiden Name",
+    "COMPLETE_FORM": "Complete the form to enable the button.",
+    "SUBMIT": "Submit"
+  },
+  "CREATOR_DETAILS": {
+    "TITLE": "Creator details",
+    "FIRST_NAME": "First name:",
+    "LAST_NAME": "Last name:",
+    "EMAIL": "E-mail:",
+    "MOBILE_NUMBER": "Mobile number:"
+  },
+  "EDIT_USER": {
+    "TITLE": "Edit user",
+    "FIRST_NAME": "First Name",
+    "LAST_NAME": "Last Name",
+    "EMAIL": "Email *",
+    "PHONE_NUMBER": "Phone number",
+    "ROLES_LABEL": "Roles",
+    "FORM_INSTRUCTIONS": "* Complete the form to enable the button.",
+    "SUBMIT_BUTTON": "Submit",
+    "CAMPAIGN": "Campaign"
+  },
+  "USER_TABLE": {
+    "FIRST_NAME": "First name",
+    "LAST_NAME": "Last name",
+    "USERNAME": "Username",
+    "EMAIL": "Email",
+    "MOBILE_NUMBER": "Mobile number",
+    "ACTIVE": "Active",
+    "EDIT": "Edit"
+  },
+  "REGISTER_FORM": {
+    "REGISTER": "Register",
+    "FIRST_NAME": "First Name",
+    "LAST_NAME": "Last Name",
+    "EMAIL": "Email",
+    "PHONE_NUMBER": "Phone number",
+    "ROLES": "Roles",
+    "COMPLETE_FORM_NOTE": "* Complete the form to enable the button.",
+    "CAMPAIGN": "Campaign"
+  },
+  "LOGIN_FORM": {
+    "LOGIN": "Login",
+    "USERNAME": "Username",
+    "PASSWORD": "Password",
+    "COMPLETE_FORM_NOTE": "* Complete the form to enable the button."
+  },
+  "ADD_CAMPAIGN_FORM": {
+    "ADD_CAMPAIGN": "Add Campaign",
+    "NAME": "Name",
+    "PURPOSE": "Purpose",
+    "COMPLETE_FORM_NOTE": "* Complete the form to enable the button.",
+    "SUBMIT": "Submit"
+  },
+  "EDIT_CAMPAIGN_FORM": {
+    "EDIT_CAMPAIGN": "Edit Campaign",
+    "NAME": "Name",
+    "PURPOSE": "Purpose",
+    "COMPLETE_FORM_NOTE": "* Complete the form to enable the button.",
+    "SUBMIT": "Submit"
+  },
+  "CUSTOM_DELETE_DIALOG": {
+    "CONFIRM_DELETE": "Are you sure you want to delete this donor?",
+    "DELETE": "Delete",
+    "CANCEL": "Cancel"
+  },
+  "DONOR_LIST": {
+    "TITLE": "Donor List of { name }",
+    "SELECT_CURRENCY": "Select Currency",
+    "SEE_DONATION_DETAILS": "See how much has been donated",
+    "DONATED": " donated { sum } { currency }"
+  },
+  "DONOR_DETAILS": {
+    "TITLE": "Donor Details"
+  },
+  "CAMPAIGN_DETAILS": {
+    "TITLE": "Campaign Details",
+    "NAME": "Name",
+    "PURPOSE": "Purpose"
+  },
+  "CAMPAIGN_LIST": {
+    "SEARCH_BY_NAME": "Search by name",
+    "SEARCH_PLACEHOLDER": "Ex. John",
+    "NAME_HEADER": "Name",
+    "PURPOSE_HEADER": "Purpose",
+    "DONORS_HEADER": "Donors",
+    "SEE_CAMPAIGN_DONORS": "See campaign donors"
+  },
+  "CAMPAIGN_TABLE": {
+    "SEARCH_LABEL": "Search",
+    "SEARCH_PLACEHOLDER": "Ex. Sale",
+    "EXPORT_CSV_BUTTON": "Export CSV",
+    "TABLE_HEADER_NAME": "Name",
+    "TABLE_HEADER_PURPOSE": "Purpose",
+    "TABLE_HEADER_DONORS": "Donors",
+    "BUTTON_SEE_DONORS": "See campaign donors",
+    "NO_DATA_TO_EXPORT": "No data to export.",
+    "TABLE_HEADER_ACTIONS": "Actions"
+  },
+  "DONATION_TABLE": {
+    "SEARCH_LABEL": "Search",
+    "SEARCH_PLACEHOLDER": "Ex. eur",
+    "EXPORT_CSV_BUTTON": "Export CSV",
+    "TABLE_HEADER_AMOUNT": "Amount",
+    "TABLE_HEADER_CURRENCY": "Currency",
+    "TABLE_HEADER_CAMPAIGN": "Campaign",
+    "TABLE_HEADER_CREATOR": "Creator",
+    "TABLE_HEADER_CREATION_DATE": "Creation Date",
+    "TABLE_HEADER_BENEFACTOR": "Benefactor",
+    "TABLE_HEADER_APPROVED": "Approved",
+    "TABLE_HEADER_APPROVED_BY": "Approved by",
+    "TABLE_HEADER_APPROVAL_DATE": "Approval Date",
+    "TABLE_HEADER_NOTES": "Notes",
+    "TABLE_HEADER_ACTIONS": "Actions"
+  },
+  "NOTATION": "Note",
+  "DONATION_EDIT": {
+    "UPDATE_DONATION": "Update Donation",
+    "AMOUNT": "Amount",
+    "AMOUNT_REQUIRED": "Amount is required",
+    "VALID_AMOUNT": "Please enter a valid amount",
+    "CURRENCY": "Currency",
+    "CURRENCY_REQUIRED": "Currency is required",
+    "CAMPAIGN": "Campaign",
+    "CAMPAIGN_REQUIRED": "Campaign is required",
+    "VALID_CAMPAIGN": "Please enter a valid campaign",
+    "BENEFACTOR": "Beneficiary",
+    "BENEFACTOR_REQUIRED": "Beneficiary is required",
+    "VALID_BENEFACTOR": "Please enter a valid beneficiary",
+    "NOTES": "Notes",
+    "FORM_INSTRUCTIONS": "* Complete the form to activate the button.",
+    "UPDATE_BUTTON": "Update"
+  },
+  "DELETE_DIALOG_DONATION": {
+    "TITLE": "Are you sure you want to delete this donation?",
+    "DELETE_BUTTON": "Delete",
+    "CANCEL_BUTTON": "Cancel"
+  },
+  "DONATION_PAGE": {
+    "ADD_DONATION": "Add Donation",
+    "AMOUNT": "Amount",
+    "AMOUNT_REQUIRED": "Amount is required",
+    "AMOUNT_PATTERN": "Please enter a valid amount",
+    "CURRENCY": "Currency",
+    "CURRENCY_REQUIRED": "Currency is required",
+    "SEARCH_CAMPAIGN": "Search Campaign",
+    "CAMPAIGN": "Campaign",
+    "CAMPAIGN_REQUIRED": "Campaign is required",
+    "CAMPAIGN_PATTERN": "Please enter a valid campaign",
+    "SEARCH_BENEFACTOR": "Search Benefactor",
+    "BENEFACTOR": "Benefactor",
+    "BENEFACTOR_REQUIRED": "Benefactor ID is required",
+    "BENEFACTOR_PATTERN": "Please enter a valid benefactor ID",
+    "NOTES": "Notes",
+    "BUTTON_HINT": "* Complete the form to enable the button.",
+    "CREATE_DONATION": "Create donation"
+  }
+}
+

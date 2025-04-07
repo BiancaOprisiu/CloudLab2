@@ -1,0 +1,78 @@
+<nav>
+  <button ariaCurrentWhenActive="page" mat-button routerLink="/home/users"
+          routerLinkActive="active">{{ 'NAVIGATION.USERS' | translate }}
+  </button>
+  <button [matMenuTriggerFor]="menu_donation" mat-button>{{ 'NAVIGATION.DONATIONS' | translate }}</button>
+  <mat-menu #menu_donation="matMenu">
+    <button ariaCurrentWhenActive="page" class="menu-item" mat-menu-item routerLink="/home/donations"
+            routerLinkActive="active">
+      <mat-icon class="icons-left">list</mat-icon>
+      {{ 'NAVIGATION.DONATION_LIST' | translate }}
+    </button>
+    <button [perms]="roles" appDonationManagement  (click)="addDonation()" class="menu-item" mat-menu-item>
+      <mat-icon class="icons-left">add</mat-icon>
+      {{ 'NAVIGATION.ADD_DONATION' | translate }}
+    </button>
+  </mat-menu>
+  <button [matMenuTriggerFor]="menu_campaign"  mat-button>{{ 'NAVIGATION.CAMPAIGNS' | translate }}</button>
+  <mat-menu #menu_campaign="matMenu">
+    <button ariaCurrentWhenActive="page" class="menu-item" mat-menu-item routerLink="/home/campaigns"
+            routerLinkActive="active">
+      <mat-icon class="icons-left">list</mat-icon>
+      {{ 'NAVIGATION.CAMPAIGN_LIST' | translate }}
+    </button>
+    <button [perms]="roles" appCampManagement (click)="addCampaign()" class="menu-item" mat-menu-item>
+      <mat-icon class="icons-left">add</mat-icon>
+      {{ 'NAVIGATION.ADD_CAMPAIGN' | translate }}
+    </button>
+  </mat-menu>
+  <button [matMenuTriggerFor]="menu_donor" mat-button>{{ 'NAVIGATION.DONORS' | translate }}</button>
+  <mat-menu #menu_donor="matMenu">
+    <button ariaCurrentWhenActive="page" class="menu-item" mat-menu-item routerLink="/home/donors"
+            routerLinkActive="active">
+      <mat-icon class="icons-left">list</mat-icon>
+      {{ 'NAVIGATION.DONOR_LIST' | translate }}
+    </button>
+    <button [perms]="roles" appBenefManagement (click)="addDonor()" class="menu-item" mat-menu-item>
+      <mat-icon class="icons-left">add</mat-icon>
+      {{ 'NAVIGATION.ADD_DONOR' | translate }}
+    </button>
+  </mat-menu>
+
+  <button [perms]="roles" appPermissionManagement ariaCurrentWhenActive="page" mat-button routerLink="/home/roles"
+          routerLinkActive="active">{{ 'NAVIGATION.ROLES' | translate }}
+  </button>
+  <div class="icons-right">
+    <mat-icon matBadge="{{unseenNr}}" [matMenuTriggerFor]="menu" [matBadgeHidden] = "unseenNr == 0">notifications</mat-icon>
+    <mat-menu #menu="matMenu">
+      <div class="menu-items-container">
+<!--        <ng-container *ngFor="let notification of notificationList$">-->
+<!--          <button class="mat-button notification" (click)="viewNotification(notification)" [ngClass]="{'notif-unseen':!notification.seen}">-->
+<!--            <mat-icon *ngIf="!notification.seen" class="notif-unseen">notifications_active</mat-icon>{{notification.title}}</button>-->
+<!--        </ng-container>-->
+      </div>
+    </mat-menu>
+    <mat-icon (click)="register()" [perms]="roles" appUserManagement ariaCurrentWhenActive="page"
+              routerLinkActive="active">person_add
+    </mat-icon>
+    <mat-icon ariaCurrentWhenActive="page" routerLink="/home/landing" routerLinkActive="active">home</mat-icon>
+
+
+    <mat-icon-button [matMenuTriggerFor]="languageMenu" aria-label="Language" style="cursor: pointer;">
+      <mat-icon>translate</mat-icon>
+    </mat-icon-button>
+    <mat-menu #languageMenu="matMenu" class="my_menu">
+      <button (click)="switchLanguage('en')" mat-menu-item>
+        <img class="flag-icon" src="assets/img.png" alt="GB Flag"/>
+        {{ 'EN' | translate }}
+      </button>
+      <button (click)="switchLanguage('ro')" mat-menu-item>
+        <img class="flag-icon" src="assets/img_1.png" alt="RO Flag"/>
+        {{ 'RO' | translate }}
+      </button>
+    </mat-menu>
+
+    <mat-icon (click)="logout()" ariaCurrentWhenActive="page" routerLink="/login" routerLinkActive="active">logout
+    </mat-icon>
+  </div>
+</nav>

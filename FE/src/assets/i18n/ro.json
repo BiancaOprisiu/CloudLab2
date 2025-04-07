@@ -1,0 +1,212 @@
+{
+  "NAVIGATION": {
+    "USERS": "Utilizatori",
+    "CAMPAIGNS": "Campanii",
+    "CAMPAIGN_LIST": "Lista de campanii",
+    "DONORS": "Donatori",
+    "DONOR_LIST": "Lista de donatori",
+    "ADD_DONOR": "Adăugați Donator",
+    "DONATIONS": "Donații",
+    "DONATION_LIST": "Lista de donații",
+    "ADD_DONATION": "Adăugați Donație",
+    "ROLES": "Roluri",
+    "ADD_CAMPAIGN": "Adăugați Campanie"
+  },
+  "ACTIONS": {
+    "ADD": "Adăugați",
+    "HOME": "Acasă"
+  },
+  "LANDING_PAGE": {
+    "HERO_TITLE": "Aplicația DonationManager",
+    "HERO_DESCRIPTION": "Software pentru gestionarea mai eficientă a comunității, activităților și membrilor.",
+    "FEATURE1_TITLE": "Organizare Eficientă",
+    "FEATURE1_DESCRIPTION": "Gestionați comunitatea, activitățile și membrii într-un mod mai eficient și organizat.",
+    "FEATURE2_TITLE": "Gestionați Donațiile",
+    "FEATURE2_DESCRIPTION": "Înregistrați și urmăriți cu ușurință donațiile pentru o transparență crescută în procesul de donare.",
+    "FEATURE3_TITLE": "Rapoarte Utile",
+    "FEATURE3_DESCRIPTION": "Accesați rapoarte și statistici relevante pentru a lua decizii informate pentru organizația dvs."
+  },
+  "DONOR_TABLE": {
+    "FIRST_NAME": "Prenume",
+    "LAST_NAME": "Nume de familie",
+    "ADDITIONAL_NAME": "Nume adițional",
+    "MAIDEN_NAME": "Nume de fată",
+    "ACTIONS": "Acţiuni"
+  },
+  "EDIT_DONOR_PAGE": {
+    "EDIT_DONOR": "Editează Donator",
+    "FIRST_NAME": "Prenume",
+    "LAST_NAME": "Nume de Familie",
+    "ADDITIONAL_NAME": "Nume Adițional",
+    "MAIDEN_NAME": "Nume de Fată",
+    "COMPLETE_FORM_MESSAGE": "* Completează formularul pentru a activa butonul.",
+    "SAVE_BUTTON": "Salvează"
+  },
+  "DELETE_DIALOG": {
+    "ARE_YOU_SURE": "Ești sigur că vrei să ștergi acest donator?",
+    "DELETE": "Șterge",
+    "CANCEL": "Anulează"
+  },
+  "ADD_DONOR_FORM": {
+    "TITLE": "Adăugare donator",
+    "FIRST_NAME": "Prenume",
+    "LAST_NAME": "Nume",
+    "ADDITIONAL_NAME": "Nume suplimentar",
+    "MAIDEN_NAME": "Nume de fată",
+    "COMPLETE_FORM": "Completați formularul pentru a activa butonul.",
+    "SUBMIT": "Trimite"
+  },
+  "CREATOR_DETAILS": {
+    "TITLE": "Detalii creator",
+    "FIRST_NAME": "Prenume:",
+    "LAST_NAME": "Nume de familie:",
+    "EMAIL": "E-mail:",
+    "MOBILE_NUMBER": "Număr de telefon:"
+  },
+  "EDIT_USER": {
+    "TITLE": "Editare utilizator",
+    "FIRST_NAME": "Prenume",
+    "LAST_NAME": "Nume",
+    "EMAIL": "Email *",
+    "PHONE_NUMBER": "Număr de telefon",
+    "ROLES_LABEL": "Roluri",
+    "FORM_INSTRUCTIONS": "* Completați formularul pentru a activa butonul.",
+    "SUBMIT_BUTTON": "Trimite",
+    "CAMPAIGN": "Campanie"
+  },
+  "USER_TABLE": {
+    "FIRST_NAME": "Prenume",
+    "LAST_NAME": "Nume de familie",
+    "USERNAME": "Nume de utilizator",
+    "EMAIL": "Email",
+    "MOBILE_NUMBER": "Număr de telefon ",
+    "ACTIVE": "Activ",
+    "EDIT": "Editare"
+  },
+  "REGISTER_FORM": {
+    "REGISTER": "Înregistrare",
+    "FIRST_NAME": "Prenume",
+    "LAST_NAME": "Nume de familie",
+    "EMAIL": "Email",
+    "PHONE_NUMBER": "Număr de telefon",
+    "ROLES": "Roluri",
+    "COMPLETE_FORM_NOTE": "* Completați formularul pentru a activa butonul.",
+    "CAMPAIGN": "Campanie"
+  },
+  "LOGIN_FORM": {
+    "LOGIN": "Autentificare",
+    "USERNAME": "Nume de utilizator",
+    "PASSWORD": "Parolă",
+    "COMPLETE_FORM_NOTE": "* Completați formularul pentru a activa butonul."
+  },
+  "ADD_CAMPAIGN_FORM": {
+    "ADD_CAMPAIGN": "Adaugă Campanie",
+    "NAME": "Nume",
+    "PURPOSE": "Scop",
+    "COMPLETE_FORM_NOTE": "* Completează formularul pentru a activa butonul.",
+    "SUBMIT": "Trimite"
+  },
+  "EDIT_CAMPAIGN_FORM": {
+    "EDIT_CAMPAIGN": "Editează Campanie",
+    "NAME": "Nume",
+    "PURPOSE": "Scop",
+    "COMPLETE_FORM_NOTE": "* Completează formularul pentru a activa butonul.",
+    "SUBMIT": "Trimite"
+  },
+  "CUSTOM_DELETE_DIALOG": {
+    "CONFIRM_DELETE": "Sunteți sigur că doriți să ștergeți acest donator?",
+    "DELETE": "Șterge",
+    "CANCEL": "Anulează"
+  },
+  "DONOR_LIST": {
+    "TITLE": "Listă Donatori pentru { name }",
+    "SELECT_CURRENCY": "Selectați Valuta",
+    "SEE_DONATION_DETAILS": "Vedeți cât s-a donat",
+    "DONATED": " a donat { sum } { currency }"
+  },
+  "DONOR_DETAILS": {
+    "TITLE": "Detalii Donator"
+  },
+  "CAMPAIGN_DETAILS": {
+    "TITLE": "Detalii Campanie",
+    "NAME": "Nume",
+    "PURPOSE": "Scop"
+  },
+  "CAMPAIGN_LIST": {
+    "SEARCH_BY_NAME": "Caută după nume",
+    "SEARCH_PLACEHOLDER": "Ex. John",
+    "NAME_HEADER": "Nume",
+    "PURPOSE_HEADER": "Scop",
+    "DONORS_HEADER": "Donatori",
+    "SEE_CAMPAIGN_DONORS": "Vizualizează donatorii campaniei"
+  },
+  "CAMPAIGN_TABLE": {
+    "SEARCH_LABEL": "Căutare",
+    "SEARCH_PLACEHOLDER": "Ex. Vânzare",
+    "EXPORT_CSV_BUTTON": "Exportă CSV",
+    "TABLE_HEADER_NAME": "Nume",
+    "TABLE_HEADER_PURPOSE": "Scop",
+    "TABLE_HEADER_DONORS": "Donatori",
+    "BUTTON_SEE_DONORS": "Vezi donatorii",
+    "NO_DATA_TO_EXPORT": "Nu există date pentru export.",
+    "TABLE_HEADER_ACTIONS": "Acţiuni"
+  },
+  "DONATION_TABLE": {
+    "SEARCH_LABEL": "Căutare",
+    "SEARCH_PLACEHOLDER": "Ex. eur",
+    "EXPORT_CSV_BUTTON": "Exportă CSV",
+    "TABLE_HEADER_AMOUNT": "Suma",
+    "TABLE_HEADER_CURRENCY": "Valuta",
+    "TABLE_HEADER_CAMPAIGN": "Campanie",
+    "TABLE_HEADER_CREATOR": "Creator",
+    "TABLE_HEADER_CREATION_DATE": "Data crearii",
+    "TABLE_HEADER_BENEFACTOR": "Beneficiar",
+    "TABLE_HEADER_APPROVED": "Aprobat",
+    "TABLE_HEADER_APPROVED_BY": "Aprobat de",
+    "TABLE_HEADER_APPROVAL_DATE": "Data aprobarii",
+    "TABLE_HEADER_NOTES": "Notita",
+    "TABLE_HEADER_ACTIONS": "Acţiuni"
+  },
+  "NOTATION": "Notiță",
+  "DONATION_EDIT": {
+    "UPDATE_DONATION": "Actualizează donația",
+    "AMOUNT": "Suma",
+    "AMOUNT_REQUIRED": "Suma este obligatorie",
+    "VALID_AMOUNT": "Vă rugăm să introduceți o sumă validă",
+    "CURRENCY": "Valută",
+    "CURRENCY_REQUIRED": "Valuta este obligatorie",
+    "CAMPAIGN": "Campanie",
+    "CAMPAIGN_REQUIRED": "Campania este obligatorie",
+    "VALID_CAMPAIGN": "Vă rugăm să introduceți o campanie validă",
+    "BENEFACTOR": "Beneficiar",
+    "BENEFACTOR_REQUIRED": "Beneficiarul este obligatoriu",
+    "VALID_BENEFACTOR": "Vă rugăm să introduceți un beneficiar valid",
+    "NOTES": "Notiță",
+    "FORM_INSTRUCTIONS": "* Completați formularul pentru a activa butonul.",
+    "UPDATE_BUTTON": "Actualizare"
+  },
+  "DELETE_DIALOG_DONATION": {
+    "TITLE": "Sunteți sigur că doriți să ștergeți această donație?",
+    "DELETE_BUTTON": "Ștergeți",
+    "CANCEL_BUTTON": "Anulați"
+  },
+  "DONATION_PAGE": {
+    "ADD_DONATION": "Adăugare Donație",
+    "AMOUNT": "Sumă",
+    "AMOUNT_REQUIRED": "Suma este obligatorie",
+    "AMOUNT_PATTERN": "Vă rugăm să introduceți o sumă validă",
+    "CURRENCY": "Valută",
+    "CURRENCY_REQUIRED": "Valuta este obligatorie",
+    "SEARCH_CAMPAIGN": "Cautare Campanie",
+    "CAMPAIGN": "Campanie",
+    "CAMPAIGN_REQUIRED": "Campania este obligatorie",
+    "CAMPAIGN_PATTERN": "Vă rugăm să introduceți o campanie validă",
+    "SEARCH_BENEFACTOR": "Cautare Beneficiar",
+    "BENEFACTOR": "Beneficiar",
+    "BENEFACTOR_REQUIRED": "ID Beneficiar este obligatoriu",
+    "BENEFACTOR_PATTERN": "Vă rugăm să introduceți un ID beneficiar valid",
+    "NOTES": "Note",
+    "BUTTON_HINT": "* Completați formularul pentru a activa butonul.",
+    "CREATE_DONATION": "Creare donație"
+  }
+}

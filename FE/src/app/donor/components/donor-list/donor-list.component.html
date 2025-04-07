@@ -1,0 +1,45 @@
+<body>
+<br>
+<br>
+<br>
+<br>
+<table mat-table [dataSource]="dataSource" class="hoverable-table">
+  <ng-container matColumnDef="firstname">
+    <th mat-header-cell *matHeaderCellDef>{{ 'DONOR_TABLE.FIRST_NAME' | translate }}</th>
+    <td mat-cell *matCellDef="let donor">{{ donor.firstname }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="lastname">
+    <th mat-header-cell *matHeaderCellDef>{{ 'DONOR_TABLE.LAST_NAME' | translate }}</th>
+    <td mat-cell *matCellDef="let donor">{{ donor.lastname }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="additionalName">
+    <th mat-header-cell *matHeaderCellDef>{{ 'DONOR_TABLE.ADDITIONAL_NAME' | translate }}</th>
+    <td mat-cell *matCellDef="let donor">{{ donor.additionalName }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="maidenName">
+    <th mat-header-cell *matHeaderCellDef>{{ 'DONOR_TABLE.MAIDEN_NAME' | translate }}</th>
+    <td mat-cell *matCellDef="let donor">{{ donor.maidenName }}</td>
+  </ng-container>
+
+    <ng-container matColumnDef="edit">
+    <th mat-header-cell class="donor-table-actions" *matHeaderCellDef>{{ 'DONOR_TABLE.ACTIONS' | translate }}</th>
+    <td mat-cell *matCellDef="let donor">
+      <mat-icon [perms]="roles" appBenefManagement (click)="editDonor(donor)">edit</mat-icon>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="delete">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let donor">
+      <mat-icon [perms]="roles" appBenefManagement (click)="deleteDonor(donor)">delete</mat-icon>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="hovered-row"></tr>
+</table>
+</body>
+

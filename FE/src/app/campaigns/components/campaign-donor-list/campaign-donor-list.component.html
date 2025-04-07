@@ -1,0 +1,27 @@
+<div>
+  <h2>{{ 'DONOR_LIST.TITLE' | translate: { name: data.name } }}</h2>
+  <hr>
+  <mat-form-field>
+    <mat-select placeholder="{{ 'DONOR_LIST.SELECT_CURRENCY' | translate }}" [(ngModel)]="selectedValue" name="currency">
+      <mat-option *ngFor="let currency of currencies" [value]="currency">
+        {{ currency | translate }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let donor of data.donors" (opened)="calculateSum(donor, data)">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{ donor.firstname || '' }} {{ donor.lastname || '' }} {{ donor.maidenName || '' }} {{ donor.additionalName || '' }}
+        </mat-panel-title>
+        <mat-panel-description>
+          {{ 'DONOR_LIST.SEE_DONATION_DETAILS' | translate }}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      {{ donor.firstname }} {{ 'DONOR_LIST.DONATED' | translate: { sum: sum, currency: selectedValue } }}
+
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

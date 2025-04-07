@@ -1,0 +1,13 @@
+body{
+  margin-top: 5%;
+}
+
+::ng-deep .mat-header-cell{
+  background-image: linear-gradient(to bottom, #758eb7, #a5cad2);
+  font-weight: bold;
+  font-size: 15px;
+}
+
+::ng-deep .mat-simple-snackbar-action {
+  color: #6f5f90 !important;
+}

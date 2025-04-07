@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: linear-gradient(to right bottom, #bc00d3, #a238e1, #844fea, #615ff0, #336bf2);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  height: 95%;
+}
+
+
+.createDonation {
+  background-color: #fff;
+  padding: 20px;
+  height: 85%;
+}
+
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #6f5f90;
+  margin-top: 10%;
+}
+
+
+.donationForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 13%;
+}
+
+
+.donationField {
+  width: 100%;
+}
+
+
+.mat-form-field {
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 14px;
+  color: #888;
+  margin-top: 10px;
+}
+
+button {
+  /*background-color: #007bff;*/
+  background-color: #6f5f90;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+::ng-deep .mat-form-field .mat-focused .mat-form-field-label {
+  color: #6f5f90;
+}
+
+::ng-deep .mat-form-field .mat-focused .mat-form-field-ripple {
+  background-color: #6f5f90;
+}
+
+::ng-deep .mat-form-field .mat-focused .mat-form-field-required-marker {
+  color: #6f5f90;
+}
+
+::ng-deep .mat-form-field .mat-focused .mat-input-element {
+  color: #6f5f90;
+}
+
+.form-button{
+  margin-top: 10%;
+  width: 100%;
+  display: flex;
+  align-self: flex-end;
+  flex-direction: column;
+}

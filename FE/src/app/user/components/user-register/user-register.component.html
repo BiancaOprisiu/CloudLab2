@@ -1,0 +1,35 @@
+<body>
+<div class="registerForm">
+  <h1>{{ 'REGISTER_FORM.REGISTER' | translate }}</h1>
+  <form class="example-form" [formGroup]="registerForm" (ngSubmit)="onSave($event)">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="{{ 'REGISTER_FORM.FIRST_NAME' | translate }}" formControlName="firstName">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="{{ 'REGISTER_FORM.LAST_NAME' | translate }}" formControlName="lastName">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="{{ 'REGISTER_FORM.EMAIL' | translate }}" formControlName="email">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="{{ 'REGISTER_FORM.PHONE_NUMBER' | translate }}" formControlName="phoneNumber">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>{{ 'REGISTER_FORM.ROLES' | translate }}</mat-label>
+      <mat-select formControlName="roles" multiple>
+        <mat-option *ngFor="let role of roleList" [value]="role" [disabled] = "campaignSelected && role == 'ROLE_REP'">{{role}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" *ngIf="repSelected">
+      <mat-label>{{ 'REGISTER_FORM.CAMPAIGN' | translate }}</mat-label>
+      <mat-select formControlName="campaigns" multiple="true" (selectionChange)="checkCamp()">
+        <mat-option *ngFor="let campaign of campaignList$" [value]="campaign">{{campaign.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="form-button">
+      <p>{{ 'REGISTER_FORM.COMPLETE_FORM_NOTE' | translate }}</p>
+      <button mat-raised-button disabled type="submit" [disabled]="!registerForm.valid">{{ 'REGISTER_FORM.REGISTER' | translate }}</button>
+    </div>
+  </form>
+</div>
+</body>

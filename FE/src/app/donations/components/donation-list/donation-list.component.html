@@ -1,0 +1,108 @@
+<body>
+<br>
+<br>
+<mat-form-field appDonationReporting [perms]="roles" appearance="standard" class="filter-field">
+  <mat-label><mat-icon>search</mat-icon> {{ 'DONATION_TABLE.SEARCH_LABEL' | translate }}</mat-label>
+  <input   style="padding-bottom: 6px" matInput (keyup)="applyFilter($event)" placeholder="{{ 'DONATION_TABLE.SEARCH_PLACEHOLDER' | translate }}" #input>
+</mat-form-field>
+<button appDonationReporting [perms]="roles" mat-raised-button (click)="exportToCSV()" class="csvButton">
+  {{ 'DONATION_TABLE.EXPORT_CSV_BUTTON' | translate }}
+  <mat-icon class="csv-icon">save_alt</mat-icon>
+</button>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 hoverable-table">
+
+  <ng-container matColumnDef="amount">
+    <th mat-header-cell *matHeaderCellDef>{{ 'DONATION_TABLE.TABLE_HEADER_AMOUNT' | translate }}</th>
+    <td mat-cell *matCellDef="let donation">{{ donation.amount }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="currency">
+    <th mat-header-cell *matHeaderCellDef>{{ 'DONATION_TABLE.TABLE_HEADER_CURRENCY' | translate }}</th>
+    <td mat-cell *matCellDef="let donation">{{ donation.currency }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="campaign">
+    <th mat-header-cell *matHeaderCellDef>{{ 'DONATION_TABLE.TABLE_HEADER_CAMPAIGN' | translate }}</th>
+    <td mat-cell class="clickable" matTooltip="Open campaign details" [matTooltipPosition]="'below'"
+        *matCellDef="let donation" (click)="openCampaignDetails(donation.campaign_id)">
+      {{ donation.campaign_id.name }}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="createdByUser">
+    <th mat-header-cell *matHeaderCellDef>{{ 'DONATION_TABLE.TABLE_HEADER_CREATOR' | translate }}</th>
+    <td class="clickable" matTooltip="Open creator details" [matTooltipPosition]="'below'" mat-cell
+        *matCellDef="let donation" (click)="openCreatorDetails(donation.createdBy)">
+      {{ donation.createdBy.firstname + " " + donation.createdBy.lastname }}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="createdDate">
+    <th mat-header-cell *matHeaderCellDef>{{ 'DONATION_TABLE.TABLE_HEADER_CREATION_DATE' | translate }}</th>
+    <td mat-cell *matCellDef="let donation">{{ donation.createdDate }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="benefactor">
+    <th mat-header-cell *matHeaderCellDef>{{ 'DONATION_TABLE.TABLE_HEADER_BENEFACTOR' | translate }}</th>
+    <td mat-cell *matCellDef="let donation">
+      {{ (donation.benefactor.firstname === 'Unknown' ? 'Unknown' :
+      (donation.benefactor.firstname || '') + ' ' +
+      (donation.benefactor.lastname || '') + ' ' +
+      (donation.benefactor.maidenName || '') + ' ' +
+      (donation.benefactor.additionalName || '')) }}
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="approved">
+    <th mat-header-cell *matHeaderCellDef>{{ 'DONATION_TABLE.TABLE_HEADER_APPROVED' | translate }}</th>
+    <td mat-cell *matCellDef="let donation">
+      <ng-container *ngIf="donation.approved; else notApproved">
+        <mat-icon class="approved_icon">check_circle</mat-icon>
+      </ng-container>
+      <ng-template #notApproved>
+        <mat-icon appDonationApprove [perms]="roles" (click)="approveDonation(donation)">
+          remove_circle_outline
+        </mat-icon>
+      </ng-template>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="approvedBy">
+    <th mat-header-cell *matHeaderCellDef>{{ 'DONATION_TABLE.TABLE_HEADER_APPROVED_BY' | translate }}</th>
+    <td mat-cell *matCellDef="let donation">
+      {{ donation.approved ? donation.approvedBy.firstname + " " + donation.approvedBy.lastname : "" }}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="approvedDate">
+    <th mat-header-cell *matHeaderCellDef>{{ 'DONATION_TABLE.TABLE_HEADER_APPROVAL_DATE' | translate }}</th>
+    <td mat-cell *matCellDef="let donation">{{ donation.approved ? donation.approveDate : "" }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="notes">
+    <th mat-header-cell *matHeaderCellDef>{{ 'DONATION_TABLE.TABLE_HEADER_NOTES' | translate }}</th>
+    <td mat-cell *matCellDef="let donation">
+      <ng-container *ngIf="donation.notes">
+        <mat-icon (click)="openNotes(donation)" matTooltip="Open notes">notes</mat-icon>
+      </ng-container>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="edit">
+    <th mat-header-cell class="donation-header-actions" *matHeaderCellDef>{{ 'DONATION_TABLE.TABLE_HEADER_ACTIONS' | translate }}</th>
+    <td mat-cell *matCellDef="let row">
+      <mat-icon [perms]="roles" appDonationManagement  (click)="editDonation(row)" [ngClass]="{'greyed-out': isApproved(row)}">edit</mat-icon>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="delete">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let donation">
+      <mat-icon [perms]="roles" appDonationManagement  (click)="deleteDonation(donation)" [ngClass]="{'greyed-out': isApproved(donation)}">delete</mat-icon>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+</body>

@@ -1,0 +1,55 @@
+<div class="createDonation">
+  <h1>{{ 'DONATION_PAGE.ADD_DONATION' | translate }}</h1>
+  <form class="donationForm" [formGroup]="donationForm" (ngSubmit)="onSubmit($event)">
+    <mat-form-field class="donationField">
+      <input matInput placeholder="{{ 'DONATION_PAGE.AMOUNT' | translate }}" formControlName="amount">
+      <mat-error *ngIf="donationForm.get('amount')?.hasError('required')">{{ 'DONATION_PAGE.AMOUNT_REQUIRED' | translate }}</mat-error>
+      <mat-error *ngIf="donationForm.get('amount')?.hasError('pattern')">{{ 'DONATION_PAGE.AMOUNT_PATTERN' | translate }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="donationField">
+      <mat-label>{{ 'DONATION_PAGE.CURRENCY' | translate }}</mat-label>
+      <mat-select formControlName="currency">
+        <mat-option *ngFor="let currency of currency" [value]="currency.value">
+          {{ currency.value }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="donationForm.get('currency')?.hasError('required')">{{ 'DONATION_PAGE.CURRENCY_REQUIRED' | translate }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="donationField">
+      <input matInput placeholder="{{ 'DONATION_PAGE.SEARCH_CAMPAIGN' | translate }}" [formControl]="searchControlCampaign">
+
+      <mat-select placeholder="{{ 'DONATION_PAGE.CAMPAIGN' | translate }}" formControlName="campaign" (selectionChange)="hideSearchCamp()" style="margin-top: 15px">
+        <mat-option *ngFor="let camp of filteredCampaigns" [value]="camp">
+          {{ camp.name }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="donationForm.get('campaign')?.hasError('required')">{{ 'DONATION_PAGE.CAMPAIGN_REQUIRED' | translate }}</mat-error>
+      <mat-error *ngIf="donationForm.get('campaign')?.hasError('pattern')">{{ 'DONATION_PAGE.CAMPAIGN_PATTERN' | translate }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="donationField">
+      <input matInput placeholder="{{ 'DONATION_PAGE.SEARCH_BENEFACTOR' | translate }}" [formControl]="searchControl">
+
+      <mat-select placeholder="{{ 'DONATION_PAGE.BENEFACTOR' | translate }}" formControlName="benefactor" (selectionChange)="hideSearchBenef()" style="margin-top: 15px">
+        <mat-option *ngFor="let benef of filteredBenefactors" [value]="benef">
+          {{ benef.firstname === 'Unknown' ? 'Unknown' : (benef.firstname + ' ' + (benef.lastname || '') + ' ' + (benef.maidenName || '') + ' ' + (benef.additionalName || '')) }}
+        </mat-option>
+      </mat-select>
+
+      <mat-error *ngIf="donationForm.get('benefactor')?.hasError('required')">{{ 'DONATION_PAGE.BENEFACTOR_REQUIRED' | translate }}</mat-error>
+      <mat-error *ngIf="donationForm.get('benefactor')?.hasError('pattern')">{{ 'DONATION_PAGE.BENEFACTOR_PATTERN' | translate }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="donationField">
+      <textarea matInput placeholder="{{ 'DONATION_PAGE.NOTES' | translate }}" formControlName="notes" maxlength="255"></textarea>
+    </mat-form-field>
+
+    <div class="form-button">
+      <p>{{ 'DONATION_PAGE.BUTTON_HINT' | translate }}</p>
+      <br>
+      <button mat-raised-button disabled type="submit" [disabled]="!donationForm.valid">{{ 'DONATION_PAGE.CREATE_DONATION' | translate }}</button>
+    </div>
+  </form>
+</div>

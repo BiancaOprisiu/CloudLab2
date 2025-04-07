@@ -1,0 +1,22 @@
+<div class="registerForm">
+  <h1>{{ 'ADD_DONOR_FORM.TITLE' | translate }}</h1>
+  <form class="example-form" [formGroup]="registerForm" (ngSubmit)="onSave()">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="{{ 'ADD_DONOR_FORM.FIRST_NAME' | translate }}" formControlName="name">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="{{ 'ADD_DONOR_FORM.LAST_NAME' | translate }}" formControlName="purpose">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="{{ 'ADD_DONOR_FORM.ADDITIONAL_NAME' | translate }}" formControlName="additionalName">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="{{ 'ADD_DONOR_FORM.MAIDEN_NAME' | translate }}" formControlName="maidenName">
+    </mat-form-field>
+    <div class="form-button">
+      <p>* {{ 'ADD_DONOR_FORM.COMPLETE_FORM' | translate }}</p>
+      <br>
+      <button mat-raised-button disabled type="submit" [disabled]="!registerForm.valid">{{ 'ADD_DONOR_FORM.SUBMIT' | translate }}</button>
+    </div>
+  </form>
+</div>
