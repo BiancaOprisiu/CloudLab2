@@ -1,0 +1,14 @@
+de\msg\javatraining\donationmanager\controller\auth\SignInResponseTest.class
+de\msg\javatraining\donationmanager\controller\role\RoleControllerTest.class
+de\msg\javatraining\donationmanager\controller\campaign\CampaignControllerTest.class
+de\msg\javatraining\donationmanager\service\permission\PermissionServiceTest.class
+de\msg\javatraining\donationmanager\service\donation\DonationServiceTest.class
+de\msg\javatraining\donationmanager\service\campaign\CampaignServiceTest.class
+de\msg\javatraining\donationmanager\controller\auth\AuthControllerTest.class
+de\msg\javatraining\donationmanager\service\role\RoleServiceTest.class
+de\msg\javatraining\donationmanager\controller\donation\DonationControllerTest.class
+de\msg\javatraining\donationmanager\controller\permission\PermissionControllerTest.class
+de\msg\javatraining\donationmanager\service\donor\DonorServiceTest.class
+de\msg\javatraining\donationmanager\controller\user\UserControllerTest.class
+de\msg\javatraining\donationmanager\controller\donor\DonorControllerTest.class
+de\msg\javatraining\donationmanager\service\user\UserServiceTest.class

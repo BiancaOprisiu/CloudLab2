@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: de.msg.javatraining.donationmanager.controller.donation.DonationControllerTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.091 s - in de.msg.javatraining.donationmanager.controller.donation.DonationControllerTest

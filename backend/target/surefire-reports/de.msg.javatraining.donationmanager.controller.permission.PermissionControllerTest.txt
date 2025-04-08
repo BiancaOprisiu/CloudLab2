@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: de.msg.javatraining.donationmanager.controller.permission.PermissionControllerTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.042 s - in de.msg.javatraining.donationmanager.controller.permission.PermissionControllerTest
