@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: de.msg.javatraining.donationmanager.controller.role.RoleControllerTest
 -------------------------------------------------------------------------------
-Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.075 s - in de.msg.javatraining.donationmanager.controller.role.RoleControllerTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.106 s - in de.msg.javatraining.donationmanager.controller.role.RoleControllerTest

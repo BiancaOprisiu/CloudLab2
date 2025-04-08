@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: de.msg.javatraining.donationmanager.controller.auth.AuthControllerTest
 -------------------------------------------------------------------------------
-Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.105 s - in de.msg.javatraining.donationmanager.controller.auth.AuthControllerTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.228 s - in de.msg.javatraining.donationmanager.controller.auth.AuthControllerTest

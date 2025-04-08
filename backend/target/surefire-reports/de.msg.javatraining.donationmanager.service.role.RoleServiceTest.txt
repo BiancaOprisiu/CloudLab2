@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: de.msg.javatraining.donationmanager.service.role.RoleServiceTest
 -------------------------------------------------------------------------------
-Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.053 s - in de.msg.javatraining.donationmanager.service.role.RoleServiceTest
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.058 s - in de.msg.javatraining.donationmanager.service.role.RoleServiceTest
