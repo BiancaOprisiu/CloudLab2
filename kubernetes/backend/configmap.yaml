@@ -10,4 +10,3 @@ data:
   DB_HOST: "mysql-service"
   DB_PORT: "3306"
   DB_NAME: "donation_manager"
-  DB_USER: "root"

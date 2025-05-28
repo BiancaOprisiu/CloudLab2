@@ -24,17 +24,21 @@ spec:
           env:
             - name: SPRING_DATASOURCE_URL
               value: jdbc:mysql://mysql-service:3306/donation_manager
+            
             - name: SPRING_DATASOURCE_USERNAME
               valueFrom:
                 secretKeyRef:
                   name: mysql-secret
-                  key: username
+                  key: mysql-root-username
+            
             - name: SPRING_DATASOURCE_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: mysql-secret
                   key: mysql-root-password
+            
             - name: SPRING_JPA_HIBERNATE_DDL_AUTO
               value: update
+            
             - name: SPRING_JPA_SHOW_SQL
               value: "true"
